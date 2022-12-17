@@ -1,0 +1,138 @@
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: hsl(216deg, 12%, 8%);
+  color: hsl(217deg, 12%, 63%);
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  color: white;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+main {
+  background: linear-gradient(0deg, hsl(215deg, 28%, 12%), hsl(214deg, 18%, 17%));
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 380px;
+  margin: 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+section > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+#thankyouWindow {
+  align-items: center;
+  text-align: center;
+}
+
+.rating-pill {
+  background-color: hsl(210deg, 19%, 18%);
+  color: hsl(25deg, 97%, 53%);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+}
+
+.icon {
+  align-self: flex-start;
+  background-color: hsl(210deg, 19%, 18%);
+  padding: 0.85rem;
+  border-radius: 100%;
+}
+.icon img {
+  width: 0.85rem;
+  aspect-ratio: 1/1;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.radio-group .radio-control {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.radio-group input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: hsl(210deg, 19%, 18%);
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.radio-group input[type=radio]:hover {
+  background-color: hsl(25deg, 97%, 53%);
+}
+.radio-group input[type=radio]:checked {
+  background-color: hsl(217deg, 12%, 63%);
+  color: white;
+}
+.radio-group input + label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.radio-group input:checked + label,
+.radio-group input:hover + label {
+  color: white;
+}
+
+form button {
+  background-color: hsl(25deg, 97%, 53%);
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.65rem;
+  transition: 0.3s ease;
+  letter-spacing: 0.15rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: white;
+  color: hsl(25deg, 97%, 53%);
+}
+
+footer {
+  color: hsl(217deg, 12%, 63%);
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: hsl(25deg, 97%, 53%);
+}
+
+.d-none {
+  display: none !important;
+}/*# sourceMappingURL=main.css.map */

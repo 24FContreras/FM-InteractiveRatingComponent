@@ -1,0 +1,162 @@
+//COLOR VARIABLES
+
+
+$orange: hsl(25, 97%, 53%);
+$lightgrey: hsl(217, 12%, 63%);
+$mediumgrey: hsl(216, 12%, 54%);
+$darkblue: hsl(213, 19%, 18%);
+$darkestblue: hsl(216, 12%, 8%);
+$circleblue: hsl(210, 19%, 18%);
+
+//LAYOUT
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  background-color: $darkestblue;
+  color: $lightgrey;
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  color: white;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.4;
+  font-size: .85rem;
+}
+
+main {
+  background: linear-gradient(0deg, hsl(215, 28%, 12%), hsl(214, 18%, 17%));
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 380px;
+  margin: 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  &>*:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+
+#thankyouWindow {
+  align-items: center;
+  text-align: center;
+}
+
+.rating-pill {
+  background-color: $circleblue;
+  color: $orange;
+  padding: .25rem .75rem;
+  border-radius: 100px;
+}
+
+.icon {
+  align-self: flex-start;
+  background-color: $circleblue;
+  padding: .85rem;
+  border-radius: 100%;
+
+  img {
+    width: .85rem;
+    aspect-ratio: 1/1;
+  }
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .radio-control {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  input[type=radio] {
+    appearance: none;
+    background-color: $circleblue;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    transition: background-color .3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $orange;
+    }
+
+    &:checked {
+      background-color: $lightgrey;
+      color: white;
+    }
+  }
+
+  input+label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: color .3s ease;
+    cursor: pointer;
+  }
+
+  input:checked+label,
+  input:hover+label {
+    color: white;
+  }
+}
+
+form button {
+  background-color: $orange;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: .65rem;
+  transition: .3s ease;
+  letter-spacing: .15rem;
+  font-size: .8rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: $orange;
+  }
+}
+
+footer {
+  color: $lightgrey;
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+
+
+//UTILITIES
+.d-none {
+  display: none !important;
+}
