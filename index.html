@@ -29,7 +29,9 @@
         is appreciated to help us improve our offering!
       </p>
       <form id="ratingForm">
-        <div class="radio-group">
+        <fieldset class="radio-group">
+          <legend style="visibility: hidden; position: absolute;">From 1 to 5, please rate your experience with support:
+          </legend>
           <div class="radio-control">
             <input type="radio" name="rating" id="radio1" class="radio" value="1" />
             <label for="radio1">1</label>
@@ -50,7 +52,7 @@
             <input type="radio" name="rating" id="radio5" class="radio" value="5" />
             <label for="radio5">5</label>
           </div>
-        </div>
+        </fieldset>
         <button type="submit" id="reviewBtn">Submit</button>
       </form>
     </section>
